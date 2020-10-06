@@ -335,3 +335,98 @@ input:focus {
   grid-template-columns: 70% 30%;
   /* grid-gap: 1em; */
 }
+
+/* sale % badge*/
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .badge {
+    transition: none;
+  }
+}
+a.badge:hover,
+a.badge:focus {
+  text-decoration: none;
+}
+.badge:empty {
+  display: none;
+}
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
+}
+.badge-primary {
+  color: #fff;
+  background-color: #007bff;
+}
+a.badge-primary:hover,
+a.badge-primary:focus {
+  color: #fff;
+  background-color: #0062cc;
+}
+a.badge-primary:focus,
+a.badge-primary.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.badge-light {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+
+/* main price sale badge */
+.price {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.price h4 {
+  font-size: 30px;
+  line-height: 39px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.price h4 .badge {
+  position: absolute;
+  left: 27px;
+  top: -25px;
+  font-size: 14px;
+}
+
+.price h4 .badge:before {
+  -webkit-transform: rotate(-8.84deg);
+  -moz-transform: rotate(-8.84deg);
+  -ms-transform: rotate(-8.84deg);
+  -o-transform: rotate(-8.84deg);
+  transform: rotate(-8.84deg);
+  border: 1px solid #828282;
+  color: #828282;
+  content: "";
+  max-width: 50px;
+  position: absolute;
+  right: -2px;
+  top: 13px;
+  width: 50px;
+}
